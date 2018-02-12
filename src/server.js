@@ -16,8 +16,8 @@ const handler = (req, res) => {
 };
 
 const app = http.createServer(handler);
-
-app.listen(3000);
+const port = process.env.PORT || process.env.NODE_PORT || 3000;
+app.listen(port);
 
 const io = socketio(app);
 
